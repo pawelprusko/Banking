@@ -1,5 +1,6 @@
 import React from 'react';
 import { Header } from './components/Header';
+import { NdaNotice } from './components/NdaNotice';
 import { HeroSection } from './components/HeroSection';
 import { LiveAssetsSection } from './components/LiveAssetsSection';
 import { CaseStudiesSection } from './components/CaseStudiesSection';
@@ -11,11 +12,14 @@ export default function App() {
       {/* Top Bar with Brand and Copy Email */}
       <Header />
 
+      {/* Confidentiality Notice (NDA) Banner */}
+      <NdaNotice />
+
       <main className="flex-1">
         {/* Header / Hero Section */}
         <HeroSection />
 
-        {/* Featured Live Assets: Roche Global Design System & STX Next 5 Presentations */}
+        {/* Featured Live Assets */}
         <LiveAssetsSection />
 
         {/* Selected Enterprise Case Studies: Catsquant, COI (mObywatel), Advartis */}

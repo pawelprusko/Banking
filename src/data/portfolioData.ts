@@ -3,44 +3,62 @@ import { CaseStudy, LiveAsset } from '../types/portfolio';
 export const LIVE_ASSETS: LiveAsset[] = [
   {
     id: 'roche-design-system',
-    title: 'Roche Global Design System & Component Library',
-    subtitle: 'Enterprise Healthcare · Data-Oriented Products',
+    title: 'Roche Global Design System & Data Viz Standards',
+    subtitle: 'Healthcare · Data-Dense Products',
     url: 'https://www.figma.com/design/jpGf8NVGHgLwfVcWNjKaDb/Tableau-1.1---R-Design-System--1-?node-id=7-9471&t=2ll65dT8YFsfMUEo-1',
     buttonLabel: 'Inspect Figma Design System File',
     description:
-      'UI component system tailored for data-oriented products, analytical tooling, and high-density information interfaces.',
+      'Enterprise component libraries, educational guidelines, and BI templates built for data-dense web tools, clinical software, and analytics dashboards.',
     highlights: [
-      'UI component library specialized for data-oriented products and analytical software suites',
-      'High-density data tables, advanced multi-dimensional filtering, and complex dataset presentation',
-      'Structured design token architecture (Global, Semantic, Component) for enterprise web applications',
-      'Comprehensive component specifications ensuring zero-drift developer handoff'
+      'Created deeply customized Figma component libraries and dedicated educational guidebooks focused entirely on complex data visualization.',
+      'Collaborated directly with the Tableau Product Owner to establish official enterprise Tableau dashboard templates and chart-oriented color palettes accessible directly within the Tableau platform for BI developers.',
+      'Established strict, accessible data visualization color systems fully aligned with Roche Brand guidelines, ensuring optimal contrast and readability.',
+      'Standardized complex data tables, multi-column filters, metric cards, and design tokens to maintain complete alignment between design and engineering.'
+    ],
+    structuredHighlights: [
+      {
+        label: 'Design System & Educational Materials',
+        detail: 'Created deeply customized Figma component libraries and dedicated educational guidebooks focused entirely on complex data visualization.'
+      },
+      {
+        label: 'Tableau Integration',
+        detail: 'Collaborated directly with the Tableau Product Owner to establish official enterprise Tableau dashboard templates and chart-oriented color palettes accessible directly within the Tableau platform for BI developers.'
+      },
+      {
+        label: 'Brand-Aligned Data Palettes',
+        detail: 'Established strict, accessible data visualization color systems fully aligned with Roche Brand guidelines, ensuring optimal contrast and readability.'
+      },
+      {
+        label: 'Component Specs & Data Patterns',
+        detail: 'Standardized complex data tables, multi-column filters, metric cards, and design tokens to maintain complete alignment between design and engineering.'
+      }
     ]
   },
   {
     id: 'stx-next-dashboards',
     title: 'STX Next — Data Experience Design Offering & Dashboards',
-    subtitle: 'Enterprise B2B SaaS · Presentation Decks',
+    subtitle: 'B2B SaaS · Dashboards & Analytics',
     description:
-      'Conception and delivery of tailored Data Experience Design services and interactive analytics dashboards that translate complex telemetry into actionable business decisions.',
-    scope: 'Led the creation of custom Data Experience Design services and interactive analytics dashboards.',
-    impact: 'Created tailored, data-oriented products that allow enterprise users to extract actionable insights efficiently.',
+      'Created the Data Experience Design framework and designed dashboards that turn complex infrastructure data into clear, actionable views.',
+    scope: 'Led the design of custom analytics dashboards and established our data UX offering.',
+    impact: 'Built clear, decision-focused dashboards that help teams spot anomalies and take action faster.',
     highlights: [
-      'Metric-to-action layout model connecting dense telemetry with immediate operator actions',
-      'Multi-dimensional filtering and cognitive noise reduction engineered for both executive leadership and operational staff'
+      'Dashboard layout model connecting dense metrics directly to user actions',
+      'Multi-dimensional filtering that reduces visual noise for executives and operators alike'
     ],
     presentations: [
       {
         id: 'cudos',
         title: '1. AWS CUDOS: Cloud Billing Analytics for Executive Strategy',
         subtitle: 'Transforming Cloud Billing Analytics Into Executive Strategy',
-        description: 'Dedicated presentation of the AWS CUDOS dashboard architecture, eliminating billing data noise and empowering strategic cloud cost governance.',
+        description: 'How we turned overwhelming AWS billing data into clear, decision-ready dashboards for leadership.',
         pdfUrl: 'https://drive.google.com/file/d/14B2Jqb4epv-GSTmjocLK7lsiMvwmhwTm/view'
       },
       {
         id: 'finops',
         title: '2. Finops Cloud Intelligence: Financial Dashboards for Cloud Ecosystems',
         subtitle: 'Actionable Cloud Intelligence Analytics',
-        description: 'Presentation of the FinOps and Snowflake dashboard ecosystem, translating millions of raw billing rows into intuitive, executive-ready decision triggers.',
+        description: 'Designing financial dashboards in Snowflake to make multi-cloud costs easy to track and optimize.',
         pdfUrl: 'https://drive.google.com/file/d/1SQpZMhshXDdSwAnOsq979A8VadZKavoL/view'
       }
     ]
@@ -65,81 +83,81 @@ export const CASE_STUDIES: CaseStudy[] = [
       'AI-Assisted Design'
     ],
     overview:
-      'Product design for a web and mobile portfolio application bringing together traditional fiat balances and crypto asset tracking into a unified, secure experience across multi-platform workflows.',
+      'Product design for a web and mobile portfolio app that brings traditional banking balances and crypto holdings together into a clear, secure experience.',
     highlights: [
       {
         phase: 'Discovery',
-        title: 'User Research & Competitor Analysis',
-        summary: 'Identified friction points in traditional crypto transfer and portfolio monitoring.',
+        title: 'User Research & Market Analysis',
+        summary: 'Identified user anxieties around crypto transfers, fluctuating fees, and wallet security.',
         details: [
-          'Conducted qualitative interviews with active investors to identify anxiety triggers during high-volatility market events.',
-          'Benchmarked mainstream banking and crypto interfaces to understand where verification flows felt clear versus overwhelming.',
-          'Mapped transfer confirmation anxieties caused by technical jargon, dynamic network fees, and irreversible addresses.'
+          'Interviewed active crypto traders and private banking clients to understand where they get stuck or hesitate.',
+          'Analyzed popular fintech and crypto apps to see what made transaction flows feel trustworthy versus confusing.',
+          'Mapped key user worries around blockchain jargon, network fees, and sending funds to the wrong address.'
         ],
-        artifacts: ['User Interview Findings Summary', 'Competitor Flow Comparison', 'Key Friction Heatmap']
+        artifacts: ['User Interview Notes', 'Competitor Teardowns', 'User Journey Map']
       },
       {
         phase: 'Alignment',
-        title: 'Stakeholder & Compliance Workshops',
-        summary: 'Aligned regulatory constraints with core portfolio feature requirements.',
+        title: 'Product Scope & Requirements',
+        summary: 'Balanced compliance requirements with a straightforward portfolio overview.',
         details: [
-          'Held recurring alignment workshops with compliance officers, legal advisors, and backend developers.',
-          'Structured core portfolio features: consolidated balance overview, P&L views, asset allocation, and multi-network transfers.',
-          'Defined security interaction flows including biometric signing, session timeouts, and confirmation checks.'
+          'Ran regular workshops with compliance, legal, and engineering to define must-haves for MVP.',
+          'Structured the core screens: total balance, asset breakdown, performance over time, and transfer flows.',
+          'Designed security flows for biometric login, transaction confirmations, and session timeouts.'
         ],
-        artifacts: ['Core Feature Matrix', 'Information Architecture Diagram', 'Security Sign-Off Specs']
+        artifacts: ['Feature Matrix', 'App Navigation Map', 'Security Flow Specs']
       },
       {
         phase: 'Prototyping',
-        title: 'AI-Assisted Rapid Vibe-Prototyping & High-Fidelity Figma System',
-        summary: 'Explored visual directions rapidly before building structured, accessible component libraries.',
+        title: 'Rapid Prototyping & Figma Components',
+        summary: 'Explored visual layouts quickly, then built a clean, reusable component library.',
         details: [
-          'Used AI-assisted visual explorations to test multiple layout densities and charting concepts within days.',
-          'Hardened validated concepts into structured Figma components with Auto Layout, consistent tokens, and flexible states.',
-          'Engineered accessible color palettes ensuring balance indicators remained clear across light, dark, and high-contrast modes.'
+          'Used rapid visual exploration to test chart styles, card densities, and layout options in days.',
+          'Built a modular Figma library with consistent spacing, tokens, and accessible color variants.',
+          'Ensured chart colors and balance indicators remain easy to read in both light and dark modes.'
         ],
-        artifacts: ['UI Component Kit (Figma)', 'Interactive Clickable Prototype', 'Token Mapping Specifications']
+        artifacts: ['Figma Component Library', 'Clickable Mobile Prototype', 'Token Stylesheet']
       },
       {
         phase: 'Iteration',
-        title: 'Usability Testing & Refinement',
-        summary: 'Iterated on transfer confirmation flows and fee transparency.',
+        title: 'Usability Testing & Refinements',
+        summary: 'Tested transfer flows with real users to ensure fees and destination checks were crystal clear.',
         details: [
-          'Tested interactive prototypes with target users to evaluate transfer confirmation clarity.',
-          'Simplified multi-network fee selection into plain-language estimates with transparent fiat breakdowns.',
-          'Refined transaction confirmation dialogs to explicitly verify destination networks and recipient checksums.'
+          'Ran usability sessions on interactive prototypes, focusing on deposit and withdrawal flows.',
+          'Replaced technical gas fee sliders with simple, plain-language options showing real fiat costs.',
+          'Added explicit confirmation screens to verify recipient addresses and selected networks before signing.'
         ],
-        artifacts: ['Usability Feedback Summary', 'Iterated Transfer Flow Specs', 'Final Developer Handoff Documentation']
+        artifacts: ['Usability Test Summary', 'Revised Transfer Flows', 'Developer Handoff Specs']
       }
     ],
     architectureBlueprint: {
-      type: 'Portfolio Information Architecture',
-      description: 'Clear three-tier structure separating high-level balance monitoring from granular transaction execution.',
+      type: 'Portfolio Structure',
+      description: 'A clean 3-level structure from high-level balances down to individual transactions.',
       layers: [
         {
-          layerName: 'Tier 1: Portfolio Overview',
-          items: ['Consolidated Total Balance', '24h Performance Summary', 'Quick Transfer / Receive Actions', 'Asset Allocation']
+          layerName: 'Level 1: Overview',
+          items: ['Total Portfolio Value', '24h Balance Change', 'Quick Actions (Send, Receive, Swap)', 'Asset Allocation Chart']
         },
         {
-          layerName: 'Tier 2: Asset Details & Breakdown',
-          items: ['Fiat Accounts & Wallets', 'Individual Crypto Holdings', 'Historical Transaction Log', 'Performance Charting']
+          layerName: 'Level 2: Holdings & History',
+          items: ['Fiat Accounts', 'Crypto Wallets', 'Transaction History', 'Performance Charts']
         },
         {
-          layerName: 'Tier 3: Transaction Execution',
-          items: ['Network & Address Validation', 'Transparent Fee Estimate', 'Biometric Authorization', 'Status Confirmation']
+          layerName: 'Level 3: Transactions',
+          items: ['Address Validation', 'Fee Breakdown in Fiat', 'Biometric Confirmation', 'Receipt & Status Screen']
         }
       ]
     },
     deliverables: [
-      'Comprehensive Web & Mobile Figma UI Component Library',
-      'Interactive Prototypes for Critical Financial User Flows',
-      'Design Token JSON Repository Synced with Engineering Pods',
-      'Usability Test Reports & Transfer Flow Handbooks'
+      'Web & Mobile Component Library (Figma)',
+      'Clickable Prototypes for Key Flows',
+      'Design Tokens for Frontend Developers',
+      'Usability Findings & Recommendations'
     ],
     governance: {
-      security: 'Aligned with Strong Customer Authentication (SCA) principles and biometric verification standards.',
-      accessibility: 'Accessible color contrasts for financial charts and dynamic system font scaling.',
-      stakeholders: ['Product Lead', 'Compliance & Legal Counsel', 'Engineering Leads']
+      security: 'Designed in line with Strong Customer Authentication (SCA) and mobile biometric standards.',
+      accessibility: 'Tested for high-contrast chart readability and dynamic system text sizing.',
+      stakeholders: ['Product Managers', 'Compliance & Legal Counsel', 'Frontend & Mobile Engineers']
     }
   },
   {
@@ -159,70 +177,70 @@ export const CASE_STUDIES: CaseStudy[] = [
       'Multi-Stakeholder'
     ],
     overview:
-      'UX/UI design for digital public services within the mObywatel mobile ecosystem—Poland’s nationwide citizen identity app, emphasizing accessibility, verification security, and clarity for millions of users.',
+      'UX/UI design for digital public services in mObywatel—Poland’s national citizen identity app. Focused on accessibility, document verification, and clear navigation for millions of citizens.',
     highlights: [
       {
         phase: 'Scope',
-        title: 'Mass-Scale Citizen Service Design',
-        summary: 'Designing digital identity services accessible to all citizens across varied devices and digital literacy levels.',
+        title: 'Citizen Service Design',
+        summary: 'Designing digital documents that are clear and accessible to everyone, regardless of age or digital literacy.',
         details: [
-          'Structured clear interaction patterns for digital document presentation, including ID cards and driver certificates.',
-          'Accounted for diverse device capabilities, ensuring snappy performance on entry-level smartphones.',
-          'Designed resilient offline presentation modes so citizens can reliably prove identity without active mobile connectivity.'
+          'Designed presentation layouts for official documents, including national ID and driver licenses.',
+          'Ensured smooth, fast rendering even on older and low-cost smartphones.',
+          'Created offline-first views so citizens can verify their documents without an active internet connection.'
         ],
-        artifacts: ['Citizen User Journey Maps', 'Offline-First Fallback Flows', 'Document Display Specifications']
+        artifacts: ['User Journey Maps', 'Offline Presentation Flows', 'Document Layout Specs']
       },
       {
         phase: 'Accessibility',
-        title: 'Rigorous WCAG 2.1 / 2.2 Compliance',
-        summary: 'Auditing and designing for strict digital accessibility standards and assistive technologies.',
+        title: 'WCAG 2.1 / 2.2 Accessibility',
+        summary: 'Designing for strict public sector accessibility standards and assistive tech.',
         details: [
-          'Ensured full compliance with Polish and European public sector digital accessibility mandates (WCAG 2.1/2.2 AA).',
-          'Conducted hands-on testing with VoiceOver and TalkBack screen readers to guarantee proper focus order and semantic roles.',
-          'Enforced 48×48px minimum touch targets and robust contrast ratios across light and dark system appearances.'
+          'Followed European and Polish digital accessibility laws (WCAG 2.1/2.2 AA).',
+          'Tested directly with VoiceOver and TalkBack screen readers for proper reading order and accessible labels.',
+          'Used minimum 48×48px tap targets and high-contrast color pairings across light and dark themes.'
         ],
-        artifacts: ['Accessibility Audit Reports', 'Screen Reader Labeling Specifications', 'Contrast Ratio Checklists']
+        artifacts: ['Accessibility Checklist', 'Screen Reader Specifications', 'Contrast Audit']
       },
       {
-        phase: 'Governance',
-        title: 'Multi-Stakeholder & Institutional Alignment',
-        summary: 'Aligning requirements across government ministries, legal teams, and backend IT architecture.',
+        phase: 'Alignment',
+        title: 'Stakeholder Alignment',
+        summary: 'Coordinating requirements between government ministries, legal teams, and backend engineers.',
         details: [
-          'Collaborated closely with ministerial representatives, legal teams, and security engineers.',
-          'Designed visual and cryptographic security elements, including dynamic holograms and watermarks to prevent forgery during inspections.',
-          'Documented standardized component guidelines for cross-functional engineering teams building independent microservices.'
+          'Worked with ministerial representatives, legal advisers, and security teams on document standards.',
+          'Designed anti-forgery visual elements, such as animated holograms and dynamic security watermarks.',
+          'Created shared design guidelines for independent engineering teams building microservices.'
         ],
-        artifacts: ['Institutional Decision Records', 'Document Security Visual Specs', 'Shared Component Library Guidelines']
+        artifacts: ['Cross-Ministry Alignment Notes', 'Hologram & Security Specs', 'Design System Guidelines']
       }
     ],
     architectureBlueprint: {
-      type: 'Citizen Document Verification Model',
-      description: 'Secure interaction flow separating local document presentation from backend registry checks.',
+      type: 'Document Verification Flow',
+      description: 'How digital documents are stored, presented, and verified on-device and offline.',
       layers: [
         {
-          layerName: 'Presentation Layer',
-          items: ['Dynamic Holographic Visuals', 'QR Inspection Code', 'Document Details & Expiry', 'Offline Local Cache']
+          layerName: 'On-Screen Document',
+          items: ['Dynamic Hologram', 'QR Code for In-Person Verification', 'Document Data & Expiry', 'Offline Encrypted Cache']
         },
         {
-          layerName: 'Verification Protocol',
-          items: ['In-Person Field Verification', 'Cryptographic Token Refresh', 'Device Biometric Unlock']
+          layerName: 'Verification Flow',
+          items: ['Field Officer In-Person Check', 'Cryptographic Token Refresh', 'Biometric Device Unlock']
         },
         {
-          layerName: 'State Registry Sync',
-          items: ['Central Citizen Database Integration', 'Driver & Vehicle Registry (CEPiK)', 'Audit & Status Logs']
+          layerName: 'Backend Integration',
+          items: ['National Citizen Register (PESEL)', 'Vehicle & Driver Database (CEPiK)', 'Audit Logs']
         }
       ]
     },
     deliverables: [
-      'Document Presentation Mobile Kit in Figma',
-      'WCAG 2.1 / 2.2 AA Accessibility Guidelines & Screen Reader Annotations',
-      'Security Elements & Holographic Animation Specs',
-      'Onboarding and Document Activation User Flows'
+      'Mobile Component Library in Figma',
+      'WCAG 2.1 / 2.2 AA Guidelines & Screen Reader Notes',
+      'Security & Hologram Animation Specs',
+      'User Flows for Onboarding & Document Setup'
     ],
     governance: {
-      security: 'Hardware-backed keystore authorization and dynamic inspection security elements.',
-      accessibility: 'WCAG 2.1 AA certified for public sector digital services.',
-      stakeholders: ['Ministry of Digital Affairs', 'COI Technical Leads', 'Verification Authorities', 'Security Advisors']
+      security: 'Hardware-backed keystore encryption and dynamic security elements to prevent screenshot forgery.',
+      accessibility: 'WCAG 2.1 AA compliant across all document views.',
+      stakeholders: ['Ministry of Digital Affairs', 'COI Engineering Leads', 'Verification Authorities', 'Security Advisors']
     }
   },
   {
@@ -243,70 +261,70 @@ export const CASE_STUDIES: CaseStudy[] = [
       'Product Vision'
     ],
     overview:
-      'Conducted a strategic UX discovery engagement for an enterprise insurance organization, analyzing operational workflows, mapping AS-IS bottlenecks, and defining the product vision for a modern unified claims platform.',
+      'A 3-month UX discovery engagement for an insurance group: analyzing operational bottlenecks, interviewing adjusters, and creating a unified product vision for their claims platform.',
     highlights: [
       {
         phase: 'Research',
-        title: 'In-Depth Interviews & Focus Groups',
-        summary: 'Uncovered key operational pain points across adjusters, underwriters, and clients.',
+        title: 'User Interviews & Focus Groups',
+        summary: 'Identified daily frustrations across claims adjusters, underwriters, and corporate clients.',
         details: [
-          'Conducted In-Depth Interviews (IDI) with claims adjusters, regional underwriters, and operational team leads.',
-          'Facilitated Focus Group Interviews (FGI) with enterprise corporate clients to capture policy management expectations.',
-          'Identified core operational bottlenecks: heavy system fragmentation and redundant manual data entry across disparate tools.'
+          'Conducted in-depth interviews with claims adjusters, underwriters, and operational leads.',
+          'Ran focus groups with enterprise clients to understand policy and claim expectations.',
+          'Pinpointed the main bottleneck: adjusters were jumping between 7 disconnected legacy tools to process a single claim.'
         ],
-        artifacts: ['Qualitative Research Transcripts', 'User Persona & Journey Maps', 'Pain Point Inventory']
+        artifacts: ['Interview Transcripts & Insights', 'User Personas', 'Pain Point Map']
       },
       {
         phase: 'Blueprinting',
-        title: 'Service Blueprinting (AS-IS to TO-BE)',
-        summary: 'Mapped operational processes from customer touchpoints through backend processing.',
+        title: 'Service Blueprinting (Current vs Future State)',
+        summary: 'Mapped out operational processes from customer claim submission to final payout.',
         details: [
-          'Constructed detailed AS-IS Service Blueprints connecting customer actions, internal employee tasks, and backend dependencies.',
-          'Designed a unified TO-BE Service Blueprint that eliminated redundant manual handoffs through smart validation workflows.',
-          'Clarified the journey from initial incident notification through automated document intake to settlement decision.'
+          'Mapped the current process, connecting client actions with adjuster tasks and legacy database steps.',
+          'Designed a streamlined future-state blueprint that cut out redundant manual handoffs and duplicate data entry.',
+          'Clarified the end-to-end journey from initial accident notice to automated intake and settlement.'
         ],
-        artifacts: ['AS-IS Operational Blueprint', 'TO-BE Target Service Blueprint', 'Process Gap Analysis']
+        artifacts: ['Current-State Service Blueprint', 'Future-State Target Blueprint', 'Process Bottleneck Analysis']
       },
       {
         phase: 'Vision',
-        title: 'Product Vision, Roadmaps & Interactive Wireframes',
-        summary: 'Synthesized insights into a phased modernization roadmap and validated wireframes.',
+        title: 'Product Vision & Wireframes',
+        summary: 'Turned research findings into a clear product roadmap and clickable wireframes.',
         details: [
-          'Created clickable mid-fidelity wireframe prototypes to validate revised claim management workflows with internal adjusters.',
-          'Formulated an executive product vision deck detailing feature roadmaps, system consolidation benefits, and delivery phases.',
-          'Delivered prioritized backlogs and functional UX specifications ready for development scoping.'
+          'Built interactive wireframe prototypes to test and validate new claim handling flows with adjusters.',
+          'Created an executive presentation showing feature priorities, system consolidation, and rollout stages.',
+          'Delivered prioritized user stories and wireframe specs ready for engineering estimation.'
         ],
-        artifacts: ['Executive Product Vision Presentation', 'Phased Digital Roadmap', 'Clickable Mid-Fidelity Wireframes']
+        artifacts: ['Executive Product Vision Deck', 'Phased Rollout Roadmap', 'Clickable Wireframe Prototypes']
       }
     ],
     architectureBlueprint: {
-      type: 'Insurance Platform Service Architecture',
-      description: 'End-to-end alignment of customer touchpoints with internal adjuster operational workflows.',
+      type: 'Claims Platform Structure',
+      description: 'Connecting customer self-service with internal adjuster workflows.',
       layers: [
         {
-          layerName: 'Frontstage: Customer & Broker Portal',
-          items: ['Guided Claim Submission Wizard', 'Digital Document Upload', 'Transparent Status Tracking']
+          layerName: 'Client & Broker Portal',
+          items: ['Step-by-Step Claim Wizard', 'Document & Photo Upload', 'Live Claim Status Tracker']
         },
         {
-          layerName: 'Backstage: Claims & Underwriting Desk',
-          items: ['Triage Queue & Task Assignment', 'Consolidated Document Viewer', 'Settlement Calculation & Approval']
+          layerName: 'Claims & Underwriting Desk',
+          items: ['Incoming Triage Queue', 'All-in-One Document Viewer', 'Settlement Calculation & Approval']
         },
         {
-          layerName: 'Support Systems & Infrastructure',
-          items: ['Core Policy Database', 'Document Archive & Audit Vault', 'Automated Notification Services']
+          layerName: 'Backend & Core Systems',
+          items: ['Policy Database', 'Document Storage & Audit Trail', 'Notification Engine']
         }
       ]
     },
     deliverables: [
-      'Comprehensive AS-IS and TO-BE Enterprise Service Blueprints',
-      'Qualitative User Research Synthesis (IDI & FGI Reports)',
-      'Clickable Workflow Wireframes & Usability Feedback',
-      'Phased Product Transformation Roadmap for Stakeholders'
+      'Current-State and Future-State Service Blueprints',
+      'User Research Synthesis (Interviews & Focus Groups)',
+      'Clickable Workflow Wireframes',
+      'Product Strategy & Rollout Plan'
     ],
     governance: {
-      security: 'GDPR compliance and strict financial audit trail preservation.',
-      accessibility: 'Clean typographic hierarchy reducing visual strain during prolonged data review.',
-      stakeholders: ['Operations Directors', 'Head of Underwriting', 'Claims Department Leads', 'IT Architecture Group']
+      security: 'Compliant with GDPR and financial audit trail requirements.',
+      accessibility: 'Designed for comfortable, all-day desktop use with clear typography and low visual strain.',
+      stakeholders: ['Operations Directors', 'Head of Underwriting', 'Claims Team Leads', 'IT Architects']
     }
   }
 ];

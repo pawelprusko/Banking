@@ -6,7 +6,7 @@ export const HeroSection: React.FC = () => {
     <section className="pt-14 pb-14 border-b border-slate-200 bg-white">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl space-y-6">
-          {/* Quick Info Bar - Unboxed metadata adhering to zero-pill discipline */}
+          {/* Quick Info Bar - Unboxed metadata */}
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-500 font-medium">
             <span>Warsaw, Poland</span>
             <span aria-hidden="true" className="text-slate-300">·</span>
@@ -25,12 +25,12 @@ export const HeroSection: React.FC = () => {
             </p>
           </div>
 
-          {/* Short Intro */}
+          {/* Short Intro - Authentic, natural copy */}
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-            Senior UX/UI Designer with 7+ years of experience building complex digital from public, fintech and healthcare sectors. Specialized in information &amp; data-dense complex products.
+            Senior UX/UI Designer with 7+ years of experience designing complex digital products across the public sector, fintech, and healthcare. Focused on data-dense interfaces, mobile and web apps, and design systems.
           </p>
 
-          {/* Navigation Action Buttons: Live Assets & Case Studies */}
+          {/* Section Navigation Buttons */}
           <div className="pt-2 flex flex-wrap items-center gap-3">
             <a
               href="#live-assets"

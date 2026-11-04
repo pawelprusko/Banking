@@ -49,6 +49,11 @@ export interface PresentationLink {
   pdfUrl: string;
 }
 
+export interface StructuredHighlight {
+  label: string;
+  detail: string;
+}
+
 export interface LiveAsset {
   id: string;
   title: string;
@@ -59,6 +64,7 @@ export interface LiveAsset {
   scope?: string;
   impact?: string;
   highlights: string[];
+  structuredHighlights?: StructuredHighlight[];
   presentations?: PresentationLink[];
 }
 

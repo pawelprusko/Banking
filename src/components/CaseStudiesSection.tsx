@@ -34,13 +34,13 @@ export const CaseStudiesSection: React.FC = () => {
         {/* Section Header */}
         <div className="max-w-2xl mb-12">
           <div className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">
-            Selected Enterprise Case Studies
+            Case Studies
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">
-            End-to-End Design Process &amp; Architecture
+            Selected Case Studies
           </h2>
           <p className="mt-2 text-slate-600 text-sm leading-relaxed">
-            Detailed breakdowns across digital banking, public sector citizen identity (mObywatel), and enterprise insurance service design.
+            Real-world design process, information architecture, and stakeholder work across banking, public sector apps, and enterprise tools.
           </p>
         </div>
 
@@ -79,9 +79,9 @@ export const CaseStudiesSection: React.FC = () => {
                       {study.subtitle}
                     </p>
 
-                    {/* Unboxed Tags - Zero-Pill Rule */}
+                    {/* Tags */}
                     <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-slate-500 pt-1">
-                      <span className="text-slate-700 font-medium">Domain Tags:</span>
+                      <span className="text-slate-700 font-medium">Focus:</span>
                       {study.tags.map((tag, tIdx) => (
                         <React.Fragment key={tIdx}>
                           <span className="text-slate-700">{tag}</span>
@@ -94,7 +94,7 @@ export const CaseStudiesSection: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Executive Overview */}
+                {/* Overview */}
                 <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
                   {study.overview}
                 </p>
@@ -110,7 +110,7 @@ export const CaseStudiesSection: React.FC = () => {
                         : 'border-transparent text-slate-500 hover:text-slate-800'
                     }`}
                   >
-                    1. Process Highlights ({study.highlights.length} Phases)
+                    1. Design Process
                   </button>
 
                   <button
@@ -122,7 +122,7 @@ export const CaseStudiesSection: React.FC = () => {
                         : 'border-transparent text-slate-500 hover:text-slate-800'
                     }`}
                   >
-                    2. Architecture Blueprint
+                    2. Information Architecture
                   </button>
 
                   <button
@@ -134,11 +134,11 @@ export const CaseStudiesSection: React.FC = () => {
                         : 'border-transparent text-slate-500 hover:text-slate-800'
                     }`}
                   >
-                    3. Governance &amp; Standards
+                    3. Stakeholders &amp; Standards
                   </button>
                 </div>
 
-                {/* Tab 1 Content: Process Highlights Accordion */}
+                {/* Tab 1 Content: Design Process Accordion */}
                 {activeTab === 'process' && (
                   <div className="space-y-3 pt-2">
                     <div className="space-y-2">
@@ -183,7 +183,7 @@ export const CaseStudiesSection: React.FC = () => {
                                 </p>
 
                                 <div className="space-y-1.5 pt-1">
-                                  <div className="text-slate-800 font-semibold">Key Methodology &amp; Execution:</div>
+                                  <div className="text-slate-800 font-semibold">Key steps:</div>
                                   <ul className="space-y-1 text-slate-600">
                                     {highlight.details.map((detail, dIdx) => (
                                       <li key={dIdx} className="flex items-start gap-2">
@@ -214,7 +214,7 @@ export const CaseStudiesSection: React.FC = () => {
                   </div>
                 )}
 
-                {/* Tab 2 Content: Architecture Blueprint */}
+                {/* Tab 2 Content: Information Architecture */}
                 {activeTab === 'blueprint' && (
                   <div className="space-y-4 pt-2">
                     <div className="rounded-md border border-slate-200 bg-white p-5 space-y-4">
@@ -226,7 +226,7 @@ export const CaseStudiesSection: React.FC = () => {
                           </span>
                         </div>
                         <span className="text-xs text-slate-500">
-                          Structured Architecture Model
+                          Information Hierarchy
                         </span>
                       </div>
 
@@ -259,19 +259,19 @@ export const CaseStudiesSection: React.FC = () => {
                   </div>
                 )}
 
-                {/* Tab 3 Content: Governance & Standards */}
+                {/* Tab 3 Content: Stakeholders & Standards */}
                 {activeTab === 'governance' && (
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2 text-xs">
                     <div className="rounded-md border border-slate-200 bg-white p-5 space-y-3">
                       <div className="font-semibold text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-2">
                         <Shield className="h-4 w-4 text-slate-500" />
-                        Regulatory &amp; Security Compliance
+                        Security &amp; Compliance
                       </div>
                       <p className="text-slate-600 leading-relaxed">
                         {study.governance.security}
                       </p>
                       <div className="pt-2 border-t border-slate-100">
-                        <span className="text-slate-700 font-semibold">Accessibility Standard:</span>
+                        <span className="text-slate-700 font-semibold">Accessibility:</span>
                         <p className="text-slate-600 mt-0.5">{study.governance.accessibility}</p>
                       </div>
                     </div>
@@ -279,10 +279,10 @@ export const CaseStudiesSection: React.FC = () => {
                     <div className="rounded-md border border-slate-200 bg-white p-5 space-y-3">
                       <div className="font-semibold text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-2">
                         <FileText className="h-4 w-4 text-slate-500" />
-                        Stakeholder &amp; Pod Collaboration
+                        Stakeholder Alignment
                       </div>
                       <p className="text-slate-500">
-                        Aligned requirements across cross-functional teams:
+                        Collaborated closely with:
                       </p>
                       <ul className="space-y-1 text-slate-600">
                         {study.governance.stakeholders.map((sh, sIdx) => (
