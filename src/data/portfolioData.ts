@@ -34,14 +34,14 @@ export const LIVE_ASSETS: LiveAsset[] = [
         title: '1. AWS CUDOS: Cloud Billing Analytics for Executive Strategy',
         subtitle: 'Transforming Cloud Billing Analytics Into Executive Strategy',
         description: 'Dedicated presentation of the AWS CUDOS dashboard architecture, eliminating billing data noise and empowering strategic cloud cost governance.',
-        pdfUrl: '/assets/aistudio/AWS_CUDOS_Deck_-_Transforming_Cloud_Billing_Analytics_Into_Executive_Strategy_8585215a.pdf'
+        pdfUrl: 'https://drive.google.com/file/d/14B2Jqb4epv-GSTmjocLK7lsiMvwmhwTm/view'
       },
       {
         id: 'finops',
         title: '2. Finops Cloud Intelligence: Financial Dashboards for Cloud Ecosystems',
         subtitle: 'Actionable Cloud Intelligence Analytics',
         description: 'Presentation of the FinOps and Snowflake dashboard ecosystem, translating millions of raw billing rows into intuitive, executive-ready decision triggers.',
-        pdfUrl: '/assets/aistudio/FinOps_Deck_-_Actionable_Cloud_Intelligence_Analytics_cb4362d1.pdf'
+        pdfUrl: 'https://drive.google.com/file/d/1SQpZMhshXDdSwAnOsq979A8VadZKavoL/view'
       }
     ]
   }
@@ -57,12 +57,15 @@ export const CASE_STUDIES: CaseStudy[] = [
     industry: 'Banking & FinTech',
     category: 'fintech',
     role: 'Lead Product Designer',
-    duration: '8 Months',
+    duration: '6 Months',
     tags: [
-      'Web & Mobile'
+      'Web & Mobile UX',
+      'Discovery',
+      'Rapid Prototyping',
+      'AI-Assisted Design'
     ],
     overview:
-      'Product design for a mobile portfolio application bringing together traditional fiat balances and crypto asset tracking into a unified, secure experience across web and mobile platforms.',
+      'Product design for a web and mobile portfolio application bringing together traditional fiat balances and crypto asset tracking into a unified, secure experience across multi-platform workflows.',
     highlights: [
       {
         phase: 'Discovery',
@@ -142,13 +145,13 @@ export const CASE_STUDIES: CaseStudy[] = [
   {
     id: 'coi-mobywatel',
     number: '02',
-    title: 'COI (Centralny Ośrodek Informatyki)',
+    title: 'COI (Polish Central IT Centre)',
     subtitle: 'mObywatel & gov.pl Ecosystem',
-    client: 'Centralny Ośrodek Informatyki (COI) / Ministry of Digital Affairs',
+    client: 'Polish Central IT Centre (COI) / Ministry of Digital Affairs',
     industry: 'Public Sector & GovTech',
     category: 'govtech',
     role: 'Senior UX/UI Consultant',
-    duration: '14 Months',
+    duration: '12 Months',
     tags: [
       'Mass-Scale Mobile UX',
       'Digital Identity',
@@ -231,7 +234,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     industry: 'Insurance & Service Design',
     category: 'enterprise',
     role: 'Lead Service Designer & UX Strategist',
-    duration: '6 Months',
+    duration: '3 Months',
     tags: [
       'Deep Discovery',
       'IDI',

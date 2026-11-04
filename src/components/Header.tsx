@@ -27,17 +27,7 @@ export const Header: React.FC = () => {
           <span className="text-slate-500 font-normal ml-2 hidden sm:inline">· Senior UX/UI</span>
         </a>
 
-        {/* Zone 2: Single-line Navigation Links */}
-        <nav className="hidden sm:flex items-center gap-7 text-sm font-medium text-slate-600">
-          <a href="#live-assets" className="hover:text-slate-900 transition-colors whitespace-nowrap shrink-0">
-            Live Assets
-          </a>
-          <a href="#case-studies" className="hover:text-slate-900 transition-colors whitespace-nowrap shrink-0">
-            Case Studies
-          </a>
-        </nav>
-
-        {/* Zone 3: ONLY Copy Email action */}
+        {/* Right: Copy Email action */}
         <div className="flex items-center gap-2 shrink-0">
           <button
             type="button"

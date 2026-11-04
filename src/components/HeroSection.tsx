@@ -1,20 +1,7 @@
-import React, { useState } from 'react';
-import { Copy, Check } from 'lucide-react';
+import React from 'react';
+import { ArrowDown } from 'lucide-react';
 
 export const HeroSection: React.FC = () => {
-  const [copied, setCopied] = useState(false);
-
-  const handleCopyEmail = async () => {
-    try {
-      await navigator.clipboard.writeText('pruskopawel@gmail.com');
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    }
-  };
-
   return (
     <section className="pt-14 pb-14 border-b border-slate-200 bg-white">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -40,29 +27,26 @@ export const HeroSection: React.FC = () => {
 
           {/* Short Intro */}
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-            Senior UX/UI Designer with 7+ years of experience building complex digital products, public sector mobile apps (mObywatel), fintech, healthcare and design systems. Specialized in information &amp; data-dense complex products.
+            Senior UX/UI Designer with 7+ years of experience building complex digital from public, fintech and healthcare sectors. Specialized in information &amp; data-dense complex products.
           </p>
 
-          {/* ONLY Copy Email CTA */}
-          <div className="pt-2 flex items-center gap-3">
-            <button
-              type="button"
-              onClick={handleCopyEmail}
-              className="inline-flex items-center gap-2 rounded-md bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-slate-800 transition-colors shadow-sm cursor-pointer"
-              aria-label="Copy direct email address"
+          {/* Navigation Action Buttons: Live Assets & Case Studies */}
+          <div className="pt-2 flex flex-wrap items-center gap-3">
+            <a
+              href="#live-assets"
+              className="inline-flex items-center gap-2 rounded-md bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-slate-800 transition-colors shadow-xs"
             >
-              {copied ? (
-                <>
-                  <Check className="h-4 w-4 text-emerald-400" />
-                  <span>Email Copied (pruskopawel@gmail.com)</span>
-                </>
-              ) : (
-                <>
-                  <Copy className="h-4 w-4 text-slate-300" />
-                  <span>Copy Email (pruskopawel@gmail.com)</span>
-                </>
-              )}
-            </button>
+              <span>Live Assets</span>
+              <ArrowDown className="h-4 w-4 text-slate-300" />
+            </a>
+
+            <a
+              href="#case-studies"
+              className="inline-flex items-center gap-2 rounded-md border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-800 hover:text-slate-950 hover:bg-slate-50 transition-colors shadow-2xs"
+            >
+              <span>Case Studies</span>
+              <ArrowDown className="h-4 w-4 text-slate-400" />
+            </a>
           </div>
         </div>
       </div>
