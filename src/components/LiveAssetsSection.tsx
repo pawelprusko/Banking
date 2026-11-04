@@ -1,293 +1,127 @@
-import React, { useState } from 'react';
-import { ExternalLink, Layers, LayoutDashboard, Sliders, CheckCircle2, ChevronRight, Code } from 'lucide-react';
+import React from 'react';
+import { ExternalLink, Layers, FileText, ArrowUpRight } from 'lucide-react';
 import { LIVE_ASSETS } from '../data/portfolioData';
 
 export const LiveAssetsSection: React.FC = () => {
-  const [selectedDensity, setSelectedDensity] = useState<'compact' | 'comfortable'>('compact');
-  const [selectedDemoIndex, setSelectedDemoIndex] = useState(0);
-
-  const stxDemoPrototypes = [
-    {
-      name: 'Fintech Risk Telemetry',
-      domain: 'Capital Markets & Liquidity',
-      kpi: 'VaR 99% Confidence Interval',
-      metric: '€4.2M (-12.4% vs benchmark)',
-      action: 'Automated Delta Neutral Hedge Trigger',
-      actionLatency: '140ms execution'
-    },
-    {
-      name: 'Clinical Biomarker Matrix',
-      domain: 'Diagnostic Instrumentation',
-      kpi: 'Troponin-T Assay Variance',
-      metric: '0.014 ng/mL (Within Target Range)',
-      action: 'Batch Calibration Quality Stamp',
-      actionLatency: 'Instant verification'
-    },
-    {
-      name: 'Cloud Infrastructure Allocator',
-      domain: 'Kubernetes Cluster Telemetry',
-      kpi: 'Node Pod Memory Saturation',
-      metric: '87.4% Utilization (Cluster Alpha)',
-      action: 'Horizontal Auto-Scale Drain Node',
-      actionLatency: '2.1s rebalance'
-    },
-    {
-      name: 'Algorithmic Order Book Liquidity',
-      domain: 'High-Frequency Order Routing',
-      kpi: 'Bid-Ask Spread Compression',
-      metric: '0.8 bps (Depth: $18.4M)',
-      action: 'Dynamic Dark Pool Router Allocation',
-      actionLatency: '< 50ms routing'
-    },
-    {
-      name: 'Public Sector Citizen SLA Monitor',
-      domain: 'GovTech Microservices',
-      kpi: 'Identity Verification Latency',
-      metric: '184ms P99 (15M Citizen Influx)',
-      action: 'Route to Geo-Distributed Edge Cache',
-      actionLatency: 'Immediate fallback'
-    }
-  ];
+  const roche = LIVE_ASSETS[0];
+  const stx = LIVE_ASSETS[1];
 
   return (
-    <section id="live-assets" className="py-16 border-b border-slate-800 bg-slate-950">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="live-assets" className="py-16 border-b border-slate-200 bg-slate-50">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-2xl mb-12">
-          <div className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">
+        <div className="max-w-2xl mb-10">
+          <div className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">
             Direct Proof of Work
           </div>
-          <h2 className="text-3xl font-bold tracking-tight text-white">
-            Featured Live Assets
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900">
+            Featured Live Assets &amp; Presentations
           </h2>
-          <p className="mt-2 text-slate-400 text-sm leading-relaxed">
-            Publicly accessible artifacts and live production prototypes illustrating token architecture, component systems, and metric-to-action dashboard engineering.
+          <p className="mt-2 text-slate-600 text-sm leading-relaxed">
+            Publicly accessible Design System file for data-oriented products and presentation decks covering enterprise cloud intelligence dashboards.
           </p>
         </div>
 
-        {/* 2-Column Asset Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Card 1: Roche Global Design System */}
-          <div className="flex flex-col justify-between rounded-lg border border-slate-800 bg-slate-900/50 p-6 hover:border-slate-700 transition-colors">
-            <div className="space-y-5">
-              <div className="flex items-center justify-between">
-                <span className="text-xs text-slate-400 font-medium">
-                  Enterprise Healthcare · Design Systems
-                </span>
-                <span className="font-mono text-xs text-slate-400">
-                  Figma Variables
-                </span>
+        {/* 2 Featured Assets Cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          {/* Card 1: Roche Global Design System & Component Library */}
+          <div className="rounded-lg border border-slate-200 bg-white p-6 sm:p-7 shadow-xs space-y-5">
+            <div className="space-y-2">
+              <div className="text-xs text-slate-500 font-medium">
+                Enterprise Healthcare · Data-Oriented Products
               </div>
-
-              <div>
-                <h3 className="text-xl font-bold text-white tracking-tight">
-                  {LIVE_ASSETS[0].title}
-                </h3>
-                <p className="mt-2 text-sm text-slate-300 leading-relaxed">
-                  {LIVE_ASSETS[0].description}
-                </p>
-              </div>
-
-              {/* Direct Link Button */}
-              <div className="pt-1">
-                <a
-                  href={LIVE_ASSETS[0].url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-md bg-white px-4 py-2.5 text-xs font-semibold text-slate-950 hover:bg-slate-100 transition-colors"
-                >
-                  <Layers className="h-4 w-4" />
-                  <span>{LIVE_ASSETS[0].buttonLabel}</span>
-                  <ExternalLink className="h-3.5 w-3.5 text-slate-600" />
-                </a>
-              </div>
-
-              {/* Key System Highlights */}
-              <div className="space-y-2 pt-2 border-t border-slate-800/80">
-                <div className="text-xs font-medium text-slate-400">Architecture Specifications:</div>
-                <ul className="space-y-1.5 text-xs text-slate-300">
-                  {LIVE_ASSETS[0].highlights.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <span className="text-slate-500 shrink-0 select-none">·</span>
-                      <span className="leading-snug">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Interactive Token Density Inspector */}
-              <div className="rounded border border-slate-800 bg-slate-950/80 p-4 space-y-3">
-                <div className="flex items-center justify-between text-xs">
-                  <span className="text-slate-400 font-medium flex items-center gap-1.5">
-                    <Sliders className="h-3.5 w-3.5 text-slate-400" />
-                    Interactive Density Mode Switcher
-                  </span>
-                  <div className="flex items-center gap-1 bg-slate-900 p-0.5 rounded border border-slate-800">
-                    <button
-                      type="button"
-                      onClick={() => setSelectedDensity('compact')}
-                      className={`px-2.5 py-1 text-xs font-medium rounded transition-colors cursor-pointer ${
-                        selectedDensity === 'compact'
-                          ? 'bg-slate-800 text-white'
-                          : 'text-slate-400 hover:text-slate-200'
-                      }`}
-                    >
-                      Compact (32px)
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setSelectedDensity('comfortable')}
-                      className={`px-2.5 py-1 text-xs font-medium rounded transition-colors cursor-pointer ${
-                        selectedDensity === 'comfortable'
-                          ? 'bg-slate-800 text-white'
-                          : 'text-slate-400 hover:text-slate-200'
-                      }`}
-                    >
-                      Comfortable (48px)
-                    </button>
-                  </div>
-                </div>
-
-                {/* Simulated Clinical Data Row Preview */}
-                <div className="font-mono text-xs border border-slate-800/80 rounded overflow-hidden">
-                  <div className="bg-slate-900/90 px-3 py-1.5 border-b border-slate-800/80 flex items-center justify-between text-slate-400">
-                    <span>Clinical Assay ID</span>
-                    <span>Biomarker Status</span>
-                    <span>Specimen Delta</span>
-                  </div>
-                  <div
-                    className={`px-3 flex items-center justify-between transition-all bg-slate-950 ${
-                      selectedDensity === 'compact' ? 'py-1 text-xs' : 'py-3 text-sm'
-                    }`}
-                  >
-                    <span className="text-slate-200 font-medium">ASSAY-9842-TX</span>
-                    <span className="text-slate-300">Within Normal Range</span>
-                    <span className="text-slate-400 tabular-nums">0.024 mg/dL</span>
-                  </div>
-                </div>
-              </div>
+              <h3 className="text-xl font-bold text-slate-900 tracking-tight">
+                {roche.title}
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                {roche.description}
+              </p>
             </div>
 
-            {/* Bottom Stats */}
-            <div className="mt-6 pt-4 border-t border-slate-800/80 grid grid-cols-3 gap-2">
-              {LIVE_ASSETS[0].stats.map((stat, idx) => (
-                <div key={idx} className="space-y-0.5">
-                  <div className="text-slate-400 text-xs">{stat.label}</div>
-                  <div className="font-mono text-base font-bold text-white tabular-nums">{stat.value}</div>
-                </div>
-              ))}
+            {/* Direct Figma Link Button */}
+            <div>
+              <a
+                href={roche.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-md bg-slate-900 px-4 py-2.5 text-xs font-semibold text-white hover:bg-slate-800 transition-colors shadow-xs"
+              >
+                <Layers className="h-4 w-4" />
+                <span>{roche.buttonLabel}</span>
+                <ExternalLink className="h-3.5 w-3.5 text-slate-400" />
+              </a>
+            </div>
+
+            {/* Clean Specifications focusing on data-oriented component architecture */}
+            <div className="space-y-2.5 pt-4 border-t border-slate-100">
+              <div className="text-xs font-semibold text-slate-700">Scope &amp; Architecture:</div>
+              <ul className="space-y-2 text-xs text-slate-600">
+                {roche.highlights.map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-2">
+                    <span className="text-slate-400 shrink-0 select-none">·</span>
+                    <span className="leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
-          {/* Card 2: STX Next Data Experience Dashboards */}
-          <div className="flex flex-col justify-between rounded-lg border border-slate-800 bg-slate-900/50 p-6 hover:border-slate-700 transition-colors">
-            <div className="space-y-5">
-              <div className="flex items-center justify-between">
-                <span className="text-xs text-slate-400 font-medium">
-                  Enterprise B2B SaaS · Telemetry UX
-                </span>
-                <span className="font-mono text-xs text-slate-400">
-                  5 Live Vercel Demos
-                </span>
+          {/* Card 2: STX Next Data Experience Dashboards & 2 Presentation Decks */}
+          <div className="rounded-lg border border-slate-200 bg-white p-6 sm:p-7 shadow-xs space-y-5">
+            <div className="space-y-2">
+              <div className="text-xs text-slate-500 font-medium">
+                Enterprise B2B SaaS · Offering &amp; Dashboards
               </div>
+              <h3 className="text-xl font-bold text-slate-900 tracking-tight">
+                {stx.title}
+              </h3>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                {stx.description}
+              </p>
+            </div>
 
+            {/* Scope & Impact Callout */}
+            <div className="rounded-md border border-slate-200/80 bg-slate-50/70 p-4 space-y-2 text-xs">
               <div>
-                <h3 className="text-xl font-bold text-white tracking-tight">
-                  {LIVE_ASSETS[1].title}
-                </h3>
-                <p className="mt-2 text-sm text-slate-300 leading-relaxed">
-                  {LIVE_ASSETS[1].description}
-                </p>
+                <strong className="text-slate-900 font-semibold">Scope: </strong>
+                <span className="text-slate-600">{stx.scope}</span>
               </div>
-
-              {/* Direct Link Button */}
-              <div className="pt-1">
-                <a
-                  href={LIVE_ASSETS[1].url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-md bg-white px-4 py-2.5 text-xs font-semibold text-slate-950 hover:bg-slate-100 transition-colors"
-                >
-                  <LayoutDashboard className="h-4 w-4" />
-                  <span>{LIVE_ASSETS[1].buttonLabel}</span>
-                  <ExternalLink className="h-3.5 w-3.5 text-slate-600" />
-                </a>
-              </div>
-
-              {/* Key System Highlights */}
-              <div className="space-y-2 pt-2 border-t border-slate-800/80">
-                <div className="text-xs font-medium text-slate-400">Framework Deliverables:</div>
-                <ul className="space-y-1.5 text-xs text-slate-300">
-                  {LIVE_ASSETS[1].highlights.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <span className="text-slate-500 shrink-0 select-none">·</span>
-                      <span className="leading-snug">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Interactive Demo Selector Showcase */}
-              <div className="rounded border border-slate-800 bg-slate-950/80 p-4 space-y-3">
-                <div className="flex items-center justify-between text-xs">
-                  <span className="text-slate-400 font-medium">
-                    Select Prototype from the 5 Live Demos:
-                  </span>
-                  <span className="font-mono text-xs text-slate-400">
-                    {selectedDemoIndex + 1} / 5
-                  </span>
-                </div>
-
-                {/* Tab buttons for 5 prototypes */}
-                <div className="flex flex-wrap gap-1.5">
-                  {stxDemoPrototypes.map((proto, idx) => (
-                    <button
-                      key={idx}
-                      type="button"
-                      onClick={() => setSelectedDemoIndex(idx)}
-                      className={`px-2.5 py-1 text-xs font-medium rounded transition-colors cursor-pointer whitespace-nowrap ${
-                        selectedDemoIndex === idx
-                          ? 'bg-slate-800 text-white'
-                          : 'bg-slate-900/70 text-slate-400 hover:text-slate-200'
-                      }`}
-                    >
-                      {proto.name}
-                    </button>
-                  ))}
-                </div>
-
-                {/* Selected Prototype Preview Detail */}
-                <div className="p-3 bg-slate-900/90 rounded border border-slate-800/80 space-y-2 text-xs">
-                  <div className="flex items-center justify-between">
-                    <span className="text-slate-400 font-medium">Domain: {stxDemoPrototypes[selectedDemoIndex].domain}</span>
-                    <span className="font-mono text-slate-400">{stxDemoPrototypes[selectedDemoIndex].actionLatency}</span>
-                  </div>
-                  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 pt-1 border-t border-slate-800/60">
-                    <div>
-                      <div className="text-slate-400 text-[11px]">{stxDemoPrototypes[selectedDemoIndex].kpi}</div>
-                      <div className="font-mono text-sm font-semibold text-slate-100">
-                        {stxDemoPrototypes[selectedDemoIndex].metric}
-                      </div>
-                    </div>
-                    <div className="text-left sm:text-right mt-1 sm:mt-0">
-                      <div className="text-slate-400 text-[11px]">Metric-to-Action Trigger</div>
-                      <div className="font-medium text-slate-200">
-                        {stxDemoPrototypes[selectedDemoIndex].action}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div>
+                <strong className="text-slate-900 font-semibold">Impact: </strong>
+                <span className="text-slate-600">{stx.impact}</span>
               </div>
             </div>
 
-            {/* Bottom Stats */}
-            <div className="mt-6 pt-4 border-t border-slate-800/80 grid grid-cols-3 gap-2">
-              {LIVE_ASSETS[1].stats.map((stat, idx) => (
-                <div key={idx} className="space-y-0.5">
-                  <div className="text-slate-400 text-xs">{stat.label}</div>
-                  <div className="font-mono text-base font-bold text-white tabular-nums">{stat.value}</div>
-                </div>
-              ))}
+            {/* 2 Presentation Links with attached PDFs */}
+            <div className="space-y-2.5 pt-3 border-t border-slate-100">
+              <div className="text-xs font-semibold text-slate-700">Presentation Decks:</div>
+              <div className="space-y-3">
+                {stx.presentations?.map((pres) => (
+                  <a
+                    key={pres.id}
+                    href={pres.pdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block rounded-md border border-slate-200 bg-white p-4 hover:border-slate-300 hover:shadow-xs transition-all text-xs"
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="space-y-1">
+                        <div className="font-bold text-slate-900 group-hover:text-slate-700 flex items-center gap-1.5">
+                          <FileText className="h-3.5 w-3.5 text-slate-500" />
+                          <span>{pres.title}</span>
+                        </div>
+                        <div className="text-[11px] text-slate-500 leading-relaxed">
+                          {pres.description}
+                        </div>
+                      </div>
+                      <span className="inline-flex items-center gap-1 shrink-0 font-medium text-slate-700 group-hover:text-slate-950 text-[11px] bg-slate-100 group-hover:bg-slate-200 px-2 py-1 rounded transition-colors">
+                        <span>Open Deck</span>
+                        <ArrowUpRight className="h-3 w-3" />
+                      </span>
+                    </div>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>

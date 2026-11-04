@@ -1,55 +1,29 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Header } from './components/Header';
-import { NdaNotice } from './components/NdaNotice';
 import { HeroSection } from './components/HeroSection';
 import { LiveAssetsSection } from './components/LiveAssetsSection';
 import { CaseStudiesSection } from './components/CaseStudiesSection';
-import { MethodologySection } from './components/MethodologySection';
-import { MetricToActionDemo } from './components/MetricToActionDemo';
 import { Footer } from './components/Footer';
-import { NdaDeckModal } from './components/NdaDeckModal';
 
 export default function App() {
-  const [isNdaDeckOpen, setIsNdaDeckOpen] = useState(false);
-
-  const handleOpenDeckModal = () => {
-    setIsNdaDeckOpen(true);
-  };
-
-  const handleCloseDeckModal = () => {
-    setIsNdaDeckOpen(false);
-  };
-
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col">
-      {/* Top Bar with 3-Zone Contract */}
-      <Header onContactClick={handleOpenDeckModal} />
-
-      {/* NDA Disclaimer Banner (Top Notice) */}
-      <NdaNotice />
+    <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col font-sans">
+      {/* Top Bar with Brand and Copy Email */}
+      <Header />
 
       <main className="flex-1">
-        {/* Hero Section */}
-        <HeroSection onRequestDeck={handleOpenDeckModal} />
+        {/* Header / Hero Section */}
+        <HeroSection />
 
-        {/* Featured Live Assets Section (Direct Proof of Work) */}
+        {/* Featured Live Assets: Roche Global Design System & STX Next 5 Presentations */}
         <LiveAssetsSection />
 
-        {/* Selected Enterprise Case Studies (5 Detailed Cards with Tabs & Accordions) */}
+        {/* Selected Enterprise Case Studies: Catsquant, COI (mObywatel), Advartis */}
         <CaseStudiesSection />
-
-        {/* Enterprise UX Design Methodology */}
-        <MethodologySection />
-
-        {/* Interactive Data Experience Design Sandbox */}
-        <MetricToActionDemo />
       </main>
 
-      {/* Footer */}
+      {/* Clean Light-Mode Footer */}
       <Footer />
-
-      {/* NDA Portfolio Deck Request Modal */}
-      <NdaDeckModal isOpen={isNdaDeckOpen} onClose={handleCloseDeckModal} />
     </div>
   );
 }

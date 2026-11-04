@@ -2,7 +2,6 @@ export type IndustryCategory =
   | 'all'
   | 'fintech'
   | 'govtech'
-  | 'healthcare'
   | 'enterprise';
 
 export interface ProcessHighlight {
@@ -11,12 +10,6 @@ export interface ProcessHighlight {
   summary: string;
   details: string[];
   artifacts: string[];
-}
-
-export interface MetricOutcome {
-  label: string;
-  value: string;
-  context: string;
 }
 
 export interface CaseStudy {
@@ -40,7 +33,6 @@ export interface CaseStudy {
       items: string[];
     }[];
   };
-  metrics: MetricOutcome[];
   deliverables: string[];
   governance: {
     security: string;
@@ -49,14 +41,24 @@ export interface CaseStudy {
   };
 }
 
+export interface PresentationLink {
+  id: string;
+  title: string;
+  subtitle?: string;
+  description: string;
+  pdfUrl: string;
+}
+
 export interface LiveAsset {
   id: string;
   title: string;
   subtitle: string;
-  url: string;
-  buttonLabel: string;
+  url?: string;
+  buttonLabel?: string;
   description: string;
-  badgeText: string;
+  scope?: string;
+  impact?: string;
   highlights: string[];
-  stats: { label: string; value: string }[];
+  presentations?: PresentationLink[];
 }
+
